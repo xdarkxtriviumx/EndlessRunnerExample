@@ -32,11 +32,13 @@ namespace Aberranthian.EndlessRunner.Game.Handlers
                 SpawnEnemy();
         }
 
+#if UNITY_EDITOR
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = new(1f, 0f, 0f, 0.3f);
             Gizmos.DrawCube(_spawnPosition, new(_spawnSizeX, 1f, 0f));
         }
+#endif
 
         private void SpawnEnemy()
         {
